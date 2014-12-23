@@ -1,0 +1,55 @@
+<html>
+<head>
+    <link href="quadratic-equation.css" rel="stylesheet" type="text/css" />
+<script>
+function invalidate () {
+	document.getElementById("r1").textContent = "TBD";
+	document.getElementById("r2").textContent = "TBD";
+}
+var dathing = function dathing (){
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    var c = document.getElementById("c").value;
+    var v = b*b-4*a*c;
+    var vr = 0-b/(2*a);
+    if(v==0){
+        var result ="The result is: " + vr;
+		var otherResult="No other result";
+    }else if (v>0){
+        var result ="The result is: " + (0-b+Math.sqrt(v))/(2*a);
+        var otherResult = "The other result is: " + (0-b-Math.sqrt(v))/(2*a);
+    }else{ // v<0
+        var vi = Math.sqrt(0-v)/(2*a);
+        var result ="The result is: "+vr+" + " + vi + "i";
+        var otherResult = "The other result is: "+vr+" - " + vi + "i";
+    }
+	document.getElementById("r1").textContent = result;
+	document.getElementById("r2").textContent = otherResult;
+}
+</script>
+<body>
+  <h1>Quadratic Equation Calculator</h1>
+  <p class="indented">a*x<sup>2</sup>+b*x+c=0</p>
+  <form>
+    a:<br>
+    <input type="text" onfocus="invalidate()" id="a">
+    <br>
+    b:<br>
+    <input type="text" onfocus="invalidate()" id="b">
+    <br>
+    c:<br>
+    <input type="text" onfocus="invalidate()" id="c">
+  </form>
+  <p><button type="button" onclick="dathing()">Submit</button>
+  <br>
+  <span id = "r1">
+  
+  </span>
+  <br>
+  <span id = "r2">
+  
+  </span>
+  </p>
+</body>
+</head>
+</html>

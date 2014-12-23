@@ -1,0 +1,19 @@
+p {
+	font-family: arial;
+	color: teal;
+}
+form {
+	font-family: trajan pro;
+	font-size:25;
+	color:green;
+}
+body{
+	background-color:bisque;
+}
+p.indented {
+	margin-left:5em;
+}
+h1{
+	font-family: sans-serif;
+	color:green;
+}
