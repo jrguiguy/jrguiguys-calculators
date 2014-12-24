@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<link href="projectile-motion.css" rel="stylesheet" type="text/css" />
+	<script>
+	function invalidate () {
+		document.getElementById("r1").textContent = "TBD";
+		}
+		
+	function dothething () {
+		var velocity = document.getElementById("v").value;
+		var angle = document.getElementById("a").value;
+		var vy0 = velocity*(Math.sin(angle * ( Math.PI/180)));
+		var vx0 = velocity*(Math.cos(angle * ( Math.PI/180)));
+		var a = -4.905;
+		var t = (0-vy0-Math.sqrt(vy0*vy0 - 4*a*0))/(2*a);
+		var result = t*vx0;
+		document.getElementById("r1").textContent = result;
+		//first version 2014 hans baschy
+}
+</script>
+		<body>
+		<h1>Projectile Motion Calculator</h1>
+			<form>
+				What is the angle?:<br>
+					<input type="text" onfocus="invalidate()" id="a">
+				<br>
+				What is the velocity?:<br>
+					<input type="text" onfocus="invalidate()" id="v">
+				<br>
+			</form>
+			<p><button type="button" onclick="dothething()">Submit</button></p>
+				<span id = "r1">
+  
+				</span>
+		</body>
+	</head>
+</html>
