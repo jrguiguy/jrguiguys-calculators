@@ -1,0 +1,23 @@
+p {
+	font-family: arial;
+	color: teal;
+}
+form {
+	font-family: Lucida Console;
+	font-size:15;
+	color:green;
+}
+body{
+	background-color:bisque;
+}
+p.indented {
+	margin-left:5em;
+}
+h1{
+	font-family: impact;
+	color:green;
+}
+button{
+	background-color:#500000;
+	color:00FFFF;
+}

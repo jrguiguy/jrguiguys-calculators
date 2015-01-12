@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<link href="linearequations.css" rel="stylesheet" type="text/css" />
+		<script>
+function invalidate () {
+	document.getElementById("r1").textContent = "TBD";
+}
+function dothething () {
+	var a = document.getElementById("a").value;
+	var b = document.getElementById("b").value;
+	var c = document.getElementById("c").value;
+	var d = document.getElementById("a2").value;
+	var e = document.getElementById("b2").value;
+	var f = document.getElementById("c2").value;
+	var k = d*b - a*e;
+	var j = b*d - e*a;
+	var x = (b*f - e*c)/j;
+	var y = (d*c - a*f)/k;
+	var result = "the x is"+x+"the y is"+y;
+	document.getElementById("r1").textContent = result;
+}
+//first version 2015 hans baschy
+		</script>
+		<body>
+		<h1>Solving Systems of Equations</h1>
+			<form>
+					First equation
+					<br>
+					<input type="text" onFocus="invalidate()" id="a">x + <input type="text" onFocus="invalidate()" id="b">y = <input type="text" onFocus="invalidate()" id="c">
+					<br>
+					Second equation
+					<br>
+					<input type="text" onFocus="invalidate()" id="a2">x + <input type="text" onFocus="invalidate()" id="b2">y = <input type="text" onFocus="invalidate()" id="c2">
+			</form>
+				<p><button type="button" onClick="dothething()">Submit</button></p> 
+					<span id = "r1">
+					
+					</span>
+		</body>
+	</head>
+</html>
