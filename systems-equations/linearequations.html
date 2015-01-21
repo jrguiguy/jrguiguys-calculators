@@ -16,9 +16,18 @@ function dothething () {
 	var j = b*d - e*a;
 	var x = (b*f - e*c)/j;
 	var y = (d*c - a*f)/k;
-	var result = "the x is"+x+"the y is"+y;
+	var result = "the x is "+x+" the y is "+y;
 	document.getElementById("r1").textContent = result;
 }
+		function doit () {
+			var t = document.getElementById("t").value;
+			var e = document.getElementById("e").value;
+			var negb = 0-t
+			var negc = 0-e
+			var result = t+"x + y = "+e;
+			document.getElementById("r").textContent = result;
+			}
+			
 //first version 2015 hans baschy
 		</script>
 		<body>
@@ -34,6 +43,16 @@ function dothething () {
 			</form>
 				<p><button type="button" onClick="dothething()">Submit</button></p> 
 					<span id = "r1">
+					
+					</span>
+					<br>
+					<form>
+			If you have an equation in slope-intercept form, convert it here:<br>
+			<br>
+				y = <input type="text" id="t">x + <input type="text" id="e">
+			</form>
+			<p><button type="button" onClick="doit()">Submit</button></p> 
+			<span id = "r">
 					
 					</span>
 		</body>
